@@ -175,7 +175,7 @@ function handleMessage(msg) {
     messageText.includes("como funciona o seu serviço?")
   ) {
     const comoFunciona =
-      "Para utilizar nosso serviço, basta seguir as orientações que são passadas após a confirmação do pagamento. Em caso de dúvidas sobre o uso, estamos à disposição para esclarecê-las.";
+      "Para utilizar a plataforma, é simples! Basta escolher a opção que se encaixa com o dado que você tem em mãos e clicar nela. Ao entrar, o sistema solicitará os dados. Leia atentamente e preencha cada um deles. Em até 48 horas, os dados serão enviados ao seu número de contato.Olhe também nosso whitepaper(Manual do cliente) em https://tutorial-sobre-plataforma-de-bus.gitbook.io/tutorialbuscadados";
     bot.sendMessage(chatId, comoFunciona);
     console.log("Resposta sobre como funciona: ", comoFunciona);
   } else if (

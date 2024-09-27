@@ -28,7 +28,7 @@ bot.on("new_chat_members", (msg) => {
   const newMember = msg.new_chat_members
     ? msg.new_chat_members[0].first_name
     : "Membro";
-  const BoasVindas = `Bem-vindo(a) ${newMember}! 🎉 Deixe sua dúvida no chat ou aguarde até que um membro da equipe entre em contato com você para resolução do seu problema. Você também pode me fazer uma pergunta!`;
+  const BoasVindas = `Bem-vindo(a) ${newMember}! 🎉 Deixe sua dúvida no chat ou aguarde até que um membro da equipe entre em contato com você para resolução do seu problema. Você também pode me fazer uma pergunta! ou olhar nosso tutorial através do link >> https://tutorial-sobre-plataforma-de-bus.gitbook.io/tutorialbuscadados`;
 
   bot.sendMessage(msg.chat.id, BoasVindas);
   console.log("NOVO USUÁRIO: ", BoasVindas);

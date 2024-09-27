@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 
 
-// Inicia o servidor na porta definida pelo Glitch ou 3000
+// Inicia o servidor na porta definida pelo provedor ou 3000
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
@@ -115,7 +115,7 @@ function handleMessage(msg) {
     messageText.includes("não coloquei a carteira")
   ) {
     const RespFaltadeDados =
-      "Se efetuou o pagamento e esqueceu de colocar os dados. Isso significa que terá que aguardar o contato de um dos nossos administradores.";
+      "Se efetuou o pagamento e esqueceu de colocar os dados. Isso significa que terá que entrar em contato com um dos nosso administradores. Experimente chamar o @AbraaoOliveira47 no privado. ";
     bot.sendMessage(chatId, RespFaltadeDados);
     console.log("Resposta sobre falta de dados fornecido pelo cliente: ", RespFaltadeDados);
   } else if (
@@ -132,7 +132,7 @@ function handleMessage(msg) {
     messageText.includes("os dados estão faltando")
   ) {
     const RespErroRecebimentoDeDados =
-      "Caso acredite que os dados estão incorretos, imcompletos ou não vieram da forma que imaginava, aguarde o contato do nosso suporte para uma resposta e solução personalizada.";
+      "Caso acredite que os dados estão incorretos, incompletos ou não vieram da forma que imaginava, aguarde o contato do nosso suporte para uma resposta e solução personalizada.";
     bot.sendMessage(chatId, RespErroRecebimentoDeDados);
     console.log("Respota sobre erro no recebimento dos dados solicitados: ", RespErroRecebimentoDeDados);
   } else if (
@@ -152,7 +152,7 @@ function handleMessage(msg) {
     messageText.includes("paguei e esqueci de colocar os dados")
   ) {
     const faltaDeDados =
-      "Se você pagou e esqueceu de vincular algum dado como carteira de pagamento, número de whatsapp ou nome, terá que aguardar o contato do nosso suporte para um atendimento e resolução personalizada para seu caso.";
+      "Se você pagou e esqueceu de vincular algum dado como carteira de pagamento, número de whatsapp ou nome, terá que entrar em contato com nosso suporte. @AbraaoOliveira47.";
     bot.sendMessage(chatId, faltaDeDados);
     console.log("Resposta ao esquecimento de vínculo de dados: ", faltaDeDados);
   } else if (
@@ -191,24 +191,30 @@ function handleMessage(msg) {
     messageText.includes("não consigo entrar na plataforma")
   ) {
     const dificuldadeDeAcesso =
-      "Se você não está conseguindo acessar, pode ser que seu acesso tenha sido bloqueado por alguma razão ou pode ser um erro de login. Recomendamos que entre em contato com nosso suporte.";
+      "Não existe uma assinatura. O que oferecemos é um sistema de solicitação a consulta de dados. O fragmento de informação é fornecido por você, e então nós te entregamos um complemento desses dados (se presente) pelo meio de contato que você nos forneceu.É um serviço único, direto e simplificado.";
     bot.sendMessage(chatId, dificuldadeDeAcesso);
     console.log("Resposta sobre dificuldade de acesso: ", dificuldadeDeAcesso);
   } else if (
     messageText.includes("quero cancelar") ||
+    messageText.includes("quero reembolso") ||
+    messageText.includes("quero rembolso") ||
+    messageText.includes("posso pedir reembolso?") ||
     messageText.includes("cancelar assinatura") ||
     messageText.includes("cancelar pagamento") ||
     messageText.includes("quero cancelar assinatura") ||
     messageText.includes("quero cancelar meu pagamento") ||
-    messageText.includes("quero cancelar meu serviço")
+    messageText.includes("quero cancelar meu serviço")||
+    messageText.includes("quero meu dinheiro!")||
+    messageText.includes("quero meu dinheiro") ||
+    messageText.includes("quero meu dinheiro de volta")
   ) {
     const cancelamento =
-      "Caso deseje cancelar o pagamento ou assinatura, por favor, entre em contato com o nosso suporte para que possamos te ajudar.";
+      "Nós não fornecemos métodos de assinaturas. Cada solicitação de reembolso deve ser tratada com o @AbraaoOliveira47, para que possa ser analisada e resolvida da melhor forma possível por ambas as partes.";
     bot.sendMessage(chatId, cancelamento);
     console.log("Resposta sobre cancelamento: ", cancelamento);
   } else {
     const defaultResponse =
-      "Desculpe, não consegui entender sua mensagem. Você pode reformular ou perguntar outra coisa!";
+      "Desculpe, não consegui entender sua pergunta. Você poderia reformular? Atente-se para erros ortográficos, caracteres especiais e espaçamentos adicionais. Sou um modelo de respostas baseado em condicionais, tenho limitações quanto a respostas.";
     bot.sendMessage(chatId, defaultResponse);
     console.log("Resposta padrão: ", defaultResponse);
   }

@@ -3,7 +3,6 @@ const cors = require("cors");
 const app = express();
 const TelegramBot = require("node-telegram-bot-api");
 const adminChatId = 6363263455;
-const adminChatId2 = "@AbraaoOliveira47";
 const token = "7570626039:AAGQ0L2nZdaz2KEkPqn2gA3ABjkbJ4IhFWA";
 const bot = new TelegramBot(token, { polling: true });
 
@@ -45,12 +44,9 @@ function handleMessage(msg) {
    
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
-if (chatId !== adminChatId) {
+if (chatId == adminChatId) {
     console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE: ', adminChatId);
     return; 
-  }else if(chatId == adminChatId2){
-  console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE: ', adminChatId2)
-  return;
   }else if (
     messageText.includes("olá") ||
     messageText.includes("oi") ||

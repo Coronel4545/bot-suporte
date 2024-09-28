@@ -38,11 +38,11 @@ bot.on("new_chat_members", (msg) => {
 // Função para lidar com mensagens recebidas
 function handleMessage(msg) {
   const chatId = msg.chat.id;
-  const adminChatId = msg.chat.id;
+  const adminChatId = msg;
   if (!msg.text) {
     return;
   }
-   console.log('ITENS: ', chatId.msg )
+   console.log('ITENS: ', adminChatId )
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 if (chatId === adminChatId) {

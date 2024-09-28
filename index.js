@@ -41,13 +41,13 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-   if (chatId === adminChatId) {
+   
+  const messageText = msg.text.toLowerCase();
+  console.log("Mensagem recebida:", messageText); // Log para depuração
+if (chatId === adminChatId) {
     console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE :', adminChatId);
     return; 
   }
-  const messageText = msg.text.toLowerCase();
-  console.log("Mensagem recebida:", messageText); // Log para depuração
-
   if (
     messageText.includes("olá") ||
     messageText.includes("oi") ||

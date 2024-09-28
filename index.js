@@ -5,7 +5,11 @@ const TelegramBot = require("node-telegram-bot-api");
 const token = "7570626039:AAGQ0L2nZdaz2KEkPqn2gA3ABjkbJ4IhFWA";
 const bot = new TelegramBot(token, { polling: true });
 const adminUser = {
-  
+  id: 6736725026,
+    is_bot: false,
+    first_name: 'Romeu Trindade',
+    username: 'RomeuTrindade796',
+    language_code: 'pt-br'
 }
 
 app.use(cors()); // Permite requisições de qualquer origem
@@ -42,7 +46,7 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-   console.log('ITENS: ', chatId.msg.from )
+   console.log('ITENS: ', chatId.from )
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 if (chatId === adminChatId) {

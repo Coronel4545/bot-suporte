@@ -45,7 +45,7 @@ function handleMessage(msg) {
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 if (userValue === adminUser ) {
-    console.log('Ignorado, pois a requisição vem de: ', adminUser + 'Origin:' + restringido )
+    console.log('Ignorado, pois a requisição vem de: ', adminUser + ' Origin: ' + restringido )
     return; 
   }else if (
     messageText.includes("olá") ||

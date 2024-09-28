@@ -47,8 +47,7 @@ function handleMessage(msg) {
 if (chatId === adminChatId) {
     console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE :', adminChatId);
     return; 
-  }
-  if (
+  }else if (
     messageText.includes("olá") ||
     messageText.includes("oi") ||
     messageText.includes("/start") ||

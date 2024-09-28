@@ -33,7 +33,10 @@ bot.on("new_chat_members", (msg) => {
   bot.sendMessage(msg.chat.id, BoasVindas);
   console.log("NOVO USUÁRIO: ", BoasVindas);
 });
-
+if(chatId === adminChatId){
+  console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE :, adminChatId  ')
+ 
+}else{
 // Função para lidar com mensagens recebidas
 function handleMessage(msg) {
   const chatId = msg.chat.id;
@@ -41,10 +44,7 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-if(chatId === adminChatId){
-  console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE :, adminChatId  ')
-  return
-}else{
+
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 

@@ -214,7 +214,7 @@ function handleMessage(msg) {
     console.log("Resposta sobre cancelamento: ", cancelamento);
   } else {
     const defaultResponse =
-      "Desculpe, não consegui entender sua pergunta. Você poderia reformular? Atente-se para erros ortográficos, caracteres especiais e espaçamentos adicionais. Sou um modelo de respostas baseado em condicionais, tenho limitações quanto a respostas.";
+      "Desculpe, não consegui entender sua pergunta. Você poderia reformular? Atente-se para erros ortográficos, caracteres especiais e espaçamentos adicionais. Sou um modelo de respostas baseado em condicionais, tenho limitações quanto a respostas.Fui desenvolvido com o propósito de ajudar a responder dúvidas.";
     bot.sendMessage(chatId, defaultResponse);
     console.log("Resposta padrão: ", defaultResponse);
   }

@@ -46,11 +46,12 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-   console.log('ITENS: ', chatId.id )
+   console.log('ITENS: ', chatId.msg.id )
+   console.log('Ignorar o: ', adminUser )
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
-if (chatId === adminChatId) {
-    
+if (chatId == adminUser ) {
+    console.log('Ignorado, pois a requisição vem de: ', adminUser)
     return; 
   }else if (
     messageText.includes("olá") ||

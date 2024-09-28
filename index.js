@@ -4,13 +4,8 @@ const app = express();
 const TelegramBot = require("node-telegram-bot-api");
 const token = "7570626039:AAGQ0L2nZdaz2KEkPqn2gA3ABjkbJ4IhFWA";
 const bot = new TelegramBot(token, { polling: true });
-const adminUser = {
-  id: 6736725026,
-    is_bot: false,
-    first_name: 'Romeu Trindade',
-    username: 'RomeuTrindade796',
-    language_code: 'pt-br'
-}
+const adminUser = 6736725026;
+  
 
 app.use(cors()); // Permite requisições de qualquer origem
 
@@ -42,15 +37,14 @@ bot.on("new_chat_members", (msg) => {
 // Função para lidar com mensagens recebidas
 function handleMessage(msg) {
   const chatId = msg.chat.id;
-  
+  const userValue =msg.from.id;
   if (!msg.text) {
     return;
   }
-   console.log('ITENS: ', chatId.msg.id )
-   console.log('Ignorar o: ', adminUser )
+ 
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
-if (chatId == adminUser ) {
+if (userValue == adminUser ) {
     console.log('Ignorado, pois a requisição vem de: ', adminUser)
     return; 
   }else if (

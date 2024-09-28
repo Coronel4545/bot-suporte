@@ -45,7 +45,7 @@ function handleMessage(msg) {
    
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
-if (chatId == adminChatId) {
+if (chatId !== adminChatId) {
     console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE: ', adminChatId);
     return; 
   }else if(chatId == adminChatId2){

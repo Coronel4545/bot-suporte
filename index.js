@@ -40,11 +40,11 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-   
+   console.log('Itens:', chatId )
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
-if (chatId == adminChatId) {
-    console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE: ', adminChatId);
+if (chatId === adminChatId) {
+    console.log('ID 1: ', adminChatId);
     return; 
   }else if (
     messageText.includes("olá") ||

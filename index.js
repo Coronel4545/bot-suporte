@@ -218,7 +218,10 @@ function handleMessage(msg) {
            messageText.includes("website")||
            messageText.includes("web")||
            messageText.includes("busca")||
-           messageText.includes("buscar")
+           messageText.includes("buscar")||
+           messageText.includes("qual site?")||
+           messageText.includes("me passa o link")||
+           messageText.includes("me passa o site")
           
   ){
     const indicarSite = "Para realizar solicitações de busca, acesse nosso portal >> https://buscadados.org";

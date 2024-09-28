@@ -42,11 +42,11 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-   console.log('Itens:', chatId )
+   console.log('ITENS: ', chatId.msg )
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 if (chatId === adminChatId) {
-    console.log('ID 1: ', adminChatId);
+    
     return; 
   }else if (
     messageText.includes("olá") ||

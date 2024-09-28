@@ -238,5 +238,5 @@ function handleMessage(msg) {
 bot.on("message", handleMessage);
 
 bot.on("polling_error", (error) => {
-  console.error("Polling Error:", error);
+  //console.error("Polling Error:", error);
 });

@@ -46,7 +46,7 @@ function handleMessage(msg) {
   if (!msg.text) {
     return;
   }
-   console.log('ITENS: ', chatId.from )
+   console.log('ITENS: ', chatId.id )
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 if (chatId === adminChatId) {

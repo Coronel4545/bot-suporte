@@ -39,6 +39,7 @@ function handleMessage(msg) {
   const chatId = msg.chat.id;
   const chatId2 = msg
  console.log("dados de usuário:", chatId2)
+  console.log("dados complementares de usuário: ", chatId)
   if (!msg.text) {
     return;
   }

@@ -212,6 +212,18 @@ function handleMessage(msg) {
       "Nós não fornecemos métodos de assinaturas. Cada solicitação de reembolso deve ser tratada com o @AbraaoOliveira47, para que possa ser analisada e resolvida da melhor forma possível por ambas as partes.";
     bot.sendMessage(chatId, cancelamento);
     console.log("Resposta sobre cancelamento: ", cancelamento);
+  }else if(messageText.includes("link")||
+           messageText.includes("site")||
+           messageText.includes("acesso")||
+           messageText.includes("website")||
+           messageText.includes("web")||
+           messageText.includes("busca")||
+           messageText.includes("buscar")
+          
+  ){
+    const indicarSite = "Para realizar solicitações de busca, acesse nosso portal >> https://buscadados.org";
+    bot.sendMessage(chatId, indicarSite);
+    console.log('Resposta de indicação do site: ', indicarSite)
   } else {
     const defaultResponse =
       "Desculpe, não consegui entender sua pergunta. Você poderia reformular? Atente-se para erros ortográficos, caracteres especiais e espaçamentos adicionais. Sou um modelo de respostas baseado em condicionais, tenho limitações quanto a respostas.Fui desenvolvido com o propósito de ajudar a responder dúvidas.";

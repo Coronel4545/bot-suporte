@@ -5,7 +5,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const token = "7570626039:AAGQ0L2nZdaz2KEkPqn2gA3ABjkbJ4IhFWA";
 const bot = new TelegramBot(token, { polling: true });
 const adminUser = 6736725026;
-  
+const restringido = "@RomeuTrindade796"; 
 
 app.use(cors()); // Permite requisições de qualquer origem
 
@@ -45,7 +45,7 @@ function handleMessage(msg) {
   const messageText = msg.text.toLowerCase();
   console.log("Mensagem recebida:", messageText); // Log para depuração
 if (userValue === adminUser ) {
-    console.log('Ignorado, pois a requisição vem de: ', adminUser+ 'Origin :@RomeuTrindade796')
+    console.log('Ignorado, pois a requisição vem de: ', adminUser + 'Origin:' + restringido )
     return; 
   }else if (
     messageText.includes("olá") ||

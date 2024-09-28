@@ -50,6 +50,7 @@ if (chatId === adminChatId) {
     return; 
   }else if(chatId === adminChatId2){
   console.log('NÃO RESPONDIDO, POIS A REQUISIÇÃO VEM DE: ', adminChatId2)
+  return;
   }else if (
     messageText.includes("olá") ||
     messageText.includes("oi") ||

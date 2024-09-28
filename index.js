@@ -37,7 +37,8 @@ bot.on("new_chat_members", (msg) => {
 // Função para lidar com mensagens recebidas
 function handleMessage(msg) {
   const chatId = msg.chat.id;
- console.log("dados de usuário:", chatId)
+  const chatId2 = msg
+ console.log("dados de usuário:", chatId2)
   if (!msg.text) {
     return;
   }

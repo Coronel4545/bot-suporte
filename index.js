@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const TelegramBot = require("node-telegram-bot-api");
-const adminChatId = -1002476380280;
 const token = "7570626039:AAGQ0L2nZdaz2KEkPqn2gA3ABjkbJ4IhFWA";
 const bot = new TelegramBot(token, { polling: true });
 
@@ -37,6 +36,7 @@ bot.on("new_chat_members", (msg) => {
 // Função para lidar com mensagens recebidas
 function handleMessage(msg) {
   const chatId = msg.chat.id;
+  const adminChatId = msg.chat.id;
   if (!msg.text) {
     return;
   }

@@ -6,7 +6,7 @@ const token = "7570626039:AAGQ0L2nZdaz2KEkPqn2gA3ABjkbJ4IhFWA";
 const bot = new TelegramBot(token, { polling: true });
 const adminUser = 6736725026;
 const restringido = "@RomeuTrindade796"; 
-
+const active = 'test';
 app.use(cors()); // Permite requisições de qualquer origem
 
 // Rota HTTP para o UptimeRobot pingar
